@@ -6,50 +6,64 @@ body {
 }
 
 header {
-  background: #4f46e5;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
-header h1 {
-  margin-bottom: 10px;
+.headline {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .btn {
   display: inline-block;
   background: white;
   color: #4f46e5;
-  padding: 10px 20px;
+  padding: 12px 25px;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 15px;
+  border-radius: 30px;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
 }
 
 section {
   max-width: 900px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
 h2 {
-  margin-bottom: 20px;
   color: #4f46e5;
+  margin-bottom: 20px;
 }
 
 .skills span {
   display: inline-block;
   background: #e0e7ff;
-  padding: 8px 15px;
-  margin: 5px;
+  padding: 8px 18px;
+  margin: 6px;
   border-radius: 20px;
+  font-size: 14px;
 }
 
 .project {
   background: white;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
 }
 
 footer {
@@ -58,3 +72,29 @@ footer {
   background: #111827;
   color: white;
 }
+
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 1.2s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
